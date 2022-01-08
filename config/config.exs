@@ -18,6 +18,15 @@ config :expertLogin, ExpertLoginWeb.Endpoint,
   pubsub_server: ExpertLogin.PubSub,
   live_view: [signing_salt: "6xtMP7km"]
 
+config :ueberauth, Ueberauth,
+  providers: [
+    github: {Ueberauth.Strategy.Github, ["user,public_repo"]}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+  client_id: "",
+  client_secret: ""
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
