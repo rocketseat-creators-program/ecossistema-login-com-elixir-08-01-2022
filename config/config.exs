@@ -27,6 +27,17 @@ config :expertLogin, ExpertLoginWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :expertLogin, ExpertLogin.Mailer, adapter: Swoosh.Adapters.Local
 
+config :ueberauth, Ueberauth,
+  providers: [
+    twitter: {Ueberauth.Strategy.Twitter, []},
+    slack: {Ueberauth.Strategy.Slack, []},
+    google: {Ueberauth.Strategy.Google, []}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Google.OAuth,
+  client_id: System.get_env("GOOGLE_CLIENT_ID"),
+  client_secret: System.get_env("GOOGLE_CLIENT_SECRET")
+
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
 

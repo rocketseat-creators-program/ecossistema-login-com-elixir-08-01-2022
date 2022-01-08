@@ -20,7 +20,11 @@ defmodule ExpertLogin.MixProject do
   def application do
     [
       mod: {ExpertLogin.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [
+        :logger,
+        :runtime_tools,
+        :ueberauth_google
+      ]
     ]
   end
 
@@ -48,7 +52,8 @@ defmodule ExpertLogin.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:ueberauth_google, "~> 0.10"}
     ]
   end
 

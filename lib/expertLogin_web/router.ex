@@ -21,9 +21,13 @@ defmodule ExpertLoginWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ExpertLoginWeb do
-  #   pipe_through :api
-  # end
+  scope "/auth", ExpertLoginWeb do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+    # post "/:provider/callback", AuthController, :callback
+  end
 
   # Enables LiveDashboard only for development
   #

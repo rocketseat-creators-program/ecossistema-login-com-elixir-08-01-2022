@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :expertLogin, ExpertLogin.Repo,
-  username: "root",
-  password: "",
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASSWORD"),
   database: "expertlogin_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
