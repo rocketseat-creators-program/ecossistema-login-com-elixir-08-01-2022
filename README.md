@@ -1,4 +1,12 @@
+<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
+
 # ExpertLogin
+
+Irei apresentar algumas maneiras de autenticação com Elixir.
+
+A Autenticação é um recurso muito utilizado no mundo ‘web’. Usando o Oauth 2.0 podemos logar e criar usuários via redes sociais!
+
+Nesse aula iremos configurar a lib ‘Ueberauth’ e vamos utilizar o Phoenix.Token.
 
 To start your Phoenix server:
 
@@ -17,3 +25,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Expert
+
+| [<img src="https://avatars.githubusercontent.com/u/57687300?s=400&u=79494f446d1fa4c328e4a7902ec790e9179a4889&v=4" width="75px;"/>](https://github.com/samantadearaujo") |
+| :-: |
+|[Sam](https://github.com/samantadearaujo)|
